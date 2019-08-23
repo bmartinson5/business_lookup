@@ -12,7 +12,7 @@ Business.destroy_all
   Business.create!(
     name: Faker::Company.name,
     founded: rand(1900..2019),
-    type: Faker::Company.industry,
+    type_of: Faker::Company.industry,
     description: Faker::Company.bs,
     number_of_branches: rand(0..20),
     location: Faker::Address.city
