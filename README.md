@@ -1,24 +1,33 @@
-# README
+# Business Lookup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Author: Ben Martinson
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+This is a rails crud API for a local business database, including random lookup and searching by name of business. Includes versioning, exception handling and model scopes.
 
-* System dependencies
+## Setup/Installation Requirements
 
-* Configuration
+* Clone the repository
+* Navigate to project directory using cd in terminal
+* Install ruby and rails globally (gem install rails inside root directory)
+* Use'bundle install' to load the Gems from the Gemfile
+* Start a postgres server in the background
+* To run the program, use 'rails start'
+* Open a web browser and navigate to the url: http://localhost:3000
 
-* Database creation
+## Support and contact details
 
-* Database initialization
+If you find a bug, run into any issues, please email benmartinson92@gmail.com
 
-* How to run the test suite
+## Technologies Used
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby
+* RubyGems
+* Rails
+* Postgres
 
-* Deployment instructions
+### License
 
-* ...
+MIT License
+Copyright (c) 2019 Benjamin Martinson
