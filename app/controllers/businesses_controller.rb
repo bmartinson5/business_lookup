@@ -27,7 +27,12 @@ class BusinessesController < ApplicationController
   end
 
   def random
-    business = Business.random()
+    business = Business.find(Business.pluck(:id).sample)
+    json_response(business)
+  end
+
+  def search_name
+    business = Business.search(params[:name])
     json_response(business)
   end
 
