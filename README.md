@@ -16,6 +16,29 @@ This is a rails crud API for a local business database, including random lookup 
 * To run the program, use 'rails start'
 * Open a web browser and navigate to the url: http://localhost:3000
 
+## Api Endpoints
+
+Method: GET   Action: Retrieves all local businesses
+* localhost:3000/v1/businesses/
+
+Method: GET   Action: Retrieves a specific business by id
+* localhost:3000/v1/businesses/:id
+
+Method: POST   Action: Creates a new business in the database
+* localhost:3000/v1/businesses/
+
+Method: DELETE  Action: Deletes a business by id
+* localhost:3000/v1/businesses/
+
+Method: PATCH  Action: Updates a existing business by id
+* localhost:3000/v1/businesses/
+
+Method: GET   Action: Searches for a business by name (returns all that are similar)
+* localhost:3000/v1/business/name?name="[enter name here]"
+
+Method: GET   Action: Retrieves a random business
+* localhost:3000/v1/business/random
+
 ## Support and contact details
 
 If you find a bug, run into any issues, please email benmartinson92@gmail.com
