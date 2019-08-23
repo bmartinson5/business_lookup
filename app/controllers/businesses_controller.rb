@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
   def index
-    businesses = Business.all
-    json_response(businesses)
+    @businesses = Business.all
+    json_response(@businesses)
   end
 
   def show
