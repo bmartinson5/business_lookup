@@ -36,9 +36,29 @@ class V1::BusinessesController < ApplicationController
     json_response(businesses)
   end
 
+  def least_branches
+    businesses = Business.all.order("number_of_branches ASC").limit(3)
+    json_response(businesses)
+  end
+
+  def oldest
+    businesses = Business.all.order("founded ASC").limit(3)
+    json_response(businesses)
+  end
+
+  def newest
+    businesses = Business.all.order("founded DESC").limit(3)
+    json_response(businesses)
+  end
+
   def search_name
     business = Business.search(params[:name])
     json_response(business)
+  end
+
+  def search_location
+    businesses = Business.search_location(params[:location])
+    json_response(businesses)
   end
 
   private

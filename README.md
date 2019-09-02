@@ -39,8 +39,17 @@ Method: GET   Action: Searches for a business by name (returns all that are simi
 Method: GET   Action: Retrieves a random business
 * localhost:3000/v1/business/random
 
-Method: GET   Action: Retrieves top 3 businesses with the most_branches
+Method: GET   Action: Retrieves top 3 businesses with the most branches
 * localhost:3000/v1/business/most_branches
+
+Method: GET   Action: Retrieves top 3 businesses with the fewest branches
+* localhost:3000/v1/business/least_branches
+
+Method: GET   Action: Retrieves top 3 businesses with the oldest founding dates
+* localhost:3000/v1/business/oldest
+
+Method: GET   Action: Retrieves top 3 businesses with the newest founding dates
+* localhost:3000/v1/business/newest
 
 ## Support and contact details
 
