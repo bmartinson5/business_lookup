@@ -1,4 +1,4 @@
-class BusinessesController < ApplicationController
+class V1::BusinessesController < ApplicationController
   def index
     @businesses = Business.all
     json_response(@businesses)
@@ -29,6 +29,11 @@ class BusinessesController < ApplicationController
   def random
     business = Business.find(Business.pluck(:id).sample)
     json_response(business)
+  end
+
+  def most_branches
+    businesses = Business.all.order("number_of_branches DESC").limit(3)
+    json_response(businesses)
   end
 
   def search_name
