@@ -52,13 +52,21 @@ class V1::BusinessesController < ApplicationController
   end
 
   def search_name
-    business = Business.search(params[:name])
-    json_response(business)
+    if params.key? :name
+      business = Business.search(params[:name])
+      json_response(business)
+    else
+      json_response({ error: "Needs a name parameter"})
+    end
   end
 
   def search_location
-    businesses = Business.search_location(params[:location])
-    json_response(businesses)
+    if params.key? :location
+      businesses = Business.search_location(params[:location])
+      json_response(businesses)
+    else
+      json_response({ error: "Needs a location parameter"})
+    end
   end
 
   private

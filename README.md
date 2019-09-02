@@ -51,6 +51,9 @@ Method: GET   Action: Retrieves top 3 businesses with the oldest founding dates
 Method: GET   Action: Retrieves top 3 businesses with the newest founding dates
 * localhost:3000/v1/business/newest
 
+Method: GET   Action: Searches for a business by location (returns all that are similar)
+* localhost:3000/v1/business/location?location="[enter location here]"
+
 ## Support and contact details
 
 If you find a bug, run into any issues, please email benmartinson92@gmail.com
